@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """ Request a RestAPI """
+import json
 import requests
 from sys import argv
-import json
 
 
 if __name__ == '__main__':
+    
     u_id = int(argv[1])
     # APIS url
     todo_url = "https://jsonplaceholder.typicode.com/todos"
