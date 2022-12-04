@@ -6,7 +6,8 @@ from sys import argv
 
 
 if __name__ == '__main__':
-    
+    """ """
+
     u_id = int(argv[1])
     # APIS url
     todo_url = "https://jsonplaceholder.typicode.com/todos"
