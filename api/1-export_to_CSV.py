@@ -27,10 +27,10 @@ if __name__ == '__main__':
 
     file_name = "{}.csv".format(u_id)
     with open(file_name, 'w') as f:
-        writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
+        writer = csv.writer(f, delimiter=',', quotechar='"',
+                            quoting=csv.QUOTE_ALL)
         for td in todo.json():
             if td["userId"] == u_id:
                 task_status = td["completed"]
                 task_title = td["title"]
                 writer.writerow([u_id, u_username, task_status, task_title])
-
