@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" Request a RestAPI and export to CSV file
+""" Request a RestAPI and export to JSON file
     argv[1] -> user id
-    CSV filename must be <user_id>.csv
+    JSON filename must be <user_id>.json
 """
 import csv
 import json
