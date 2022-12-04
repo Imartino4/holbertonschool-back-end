@@ -26,8 +26,8 @@ if __name__ == '__main__':
             break
 
     list_of_dict = []
-    todo_dict = {}
     for td in todo.json():
+        todo_dict = {}
         if td['userId'] == u_id:
             todo_dict['task'] = td['title']
             todo_dict['completed'] = td['completed']
