@@ -34,9 +34,3 @@ if __name__ == '__main__':
                 u_name, task_done, total_task))
     for title in task_title:
         print("\t {}".format(title))
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
