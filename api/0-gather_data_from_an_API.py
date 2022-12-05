@@ -28,7 +28,7 @@ if __name__ == '__main__':
             if td["completed"]:
                 task_title.append(td["title"])
 
-    print("Employee {} is donde with tasks({}/{}:)".format(
+    print("Employee {} is donde with tasks({}/{}):".format(
                 u_name, len(task_title), total_task))
     for title in task_title:
         print("\t {}".format(title))
