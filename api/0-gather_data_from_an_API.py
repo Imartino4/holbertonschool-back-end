@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Request a RestAPI """
+""" Request a RestAPI
+    argv[1] -> user id
+"""
 import json
 import requests
 from sys import argv
