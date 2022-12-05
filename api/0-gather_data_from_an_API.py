@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-""" Request a RestAPI
-    argv[1] -> user id
-"""
+""" Request a RestAPI """
+import json
 import requests
 from sys import argv
 
@@ -10,18 +9,20 @@ if __name__ == '__main__':
     """ """
 
     u_id = int(argv[1])
-    # APIS url, se podrian pedir solo las correspondiemtes al id
-    todo = requests.get("https://jsonplaceholder.typicode.com/todos").json()
-    user = requests.get("https://jsonplaceholder.typicode.com/users").json()
+    # APIS url
+    todo_url = "https://jsonplaceholder.typicode.com/todos"
+    user_url = "https://jsonplaceholder.typicode.com/users"
+    user = requests.get(user_url)
+    todo = requests.get(todo_url)
 
-    for u in user:
+    for u in user.json():
         if u["id"] == u_id:
             u_name = u["name"]
             break
 
-    task_title = []
     total_task = 0
-    for td in todo:
+    task_title = []
+    for td in todo.json():
         if td["userId"] == u_id:
             total_task += 1
             if td["completed"]:
