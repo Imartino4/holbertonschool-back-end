@@ -12,10 +12,8 @@ if __name__ == '__main__':
 
     u_id = int(argv[1])
     # APIS url
-    todo_url = "https://jsonplaceholder.typicode.com/todos"
-    user_url = "https://jsonplaceholder.typicode.com/users"
-    user = requests.get(user_url)
-    todo = requests.get(todo_url)
+    todo = requests.get("https://jsonplaceholder.typicode.com/todos")
+    user = requests.get("https://jsonplaceholder.typicode.com/users")
 
     for u in user.json():
         if u["id"] == u_id:
@@ -36,3 +34,9 @@ if __name__ == '__main__':
                 u_name, task_done, total_task))
     for title in task_title:
         print("\t {}".format(title))
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
